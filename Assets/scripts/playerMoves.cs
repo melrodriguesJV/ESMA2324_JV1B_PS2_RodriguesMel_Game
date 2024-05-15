@@ -11,6 +11,7 @@ public class playerMoves : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
+    private float wallJumpCooldown;
 
     private void Awake()
     {
@@ -22,25 +23,48 @@ public class playerMoves : MonoBehaviour
     private void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        body.velocity = new Vector2(horizontalInput*speed, body.velocity.y);
 
         if (horizontalInput > 0.01f)
             transform.localScale = Vector3.one;
         else if (horizontalInput < -0.01f)
             transform.localScale = new Vector3(1,1,1);
 
-        if (Input.GetKey(KeyCode.Space) && isGrounded())
-            Jump();
-
         anim.SetBool("run", horizontalInput !=0);
         anim.SetBool("grounded", isGrounded());
+
+        if (wallJumpCooldown < 0.2f)
+        {
+
+            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+
+            if (onWall() && !isGrounded())
+            {
+                body.gravityScale = 0;
+                body.velocity = Vector2.zero;
+            }
+            else
+                body.gravityScale = 2;
+
+            if (Input.GetKey(KeyCode.Space) && isGrounded())
+                Jump();
+        }
+        else
+            wallJumpCooldown += Time.deltaTime;
 
     }
 
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, jumpforce);
-        anim.SetTrigger("jump");
+        if (isGrounded())
+        {
+            body.velocity = new Vector2(body.velocity.x, jumpforce);
+            anim.SetTrigger("jump");
+        }
+        else if(onWall() && !isGrounded())
+        {
+
+        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
