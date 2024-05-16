@@ -24,26 +24,44 @@ public class playerMoves : MonoBehaviour
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
-            body.velocity = new Vector2(body.velocity.x, jumpforce);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && onWall)
-        {
-            body.velocity = new Vector2(body.velocity.x, jumpforce);
-        }
-
+        
         //flip the player
         if (horizontalInput > 0.01f)
             transform.localScale = Vector3.one;
         else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(1,1,1);
+            transform.localScale = new Vector3(-1,1,1);
 
         //animations
         anim.SetBool("run", horizontalInput !=0);
         anim.SetBool("grounded", grounded);
+
+        if (wallJumpCooldown < 0.2f)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Jump();
+            }
+
+            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+        }
+        else
+            wallJumpCooldown += Time.deltaTime;
+    }
+
+    private void Jump()
+    {
+        if (grounded)
+        {
+            body.velocity = new Vector2(body.velocity.x, jumpforce);
+            anim.SetTrigger("jump");
+        }
+
+        if (onWall && !grounded)
+        {
+            body.velocity = new Vector2(body.velocity.x, jumpforce);
+            anim.SetTrigger("jump");
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
