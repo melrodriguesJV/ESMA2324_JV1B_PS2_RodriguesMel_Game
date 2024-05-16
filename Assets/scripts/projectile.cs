@@ -5,7 +5,6 @@ using UnityEngine;
 public class projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private Transform firePoint;
     private float direction;
     private bool hit;
 
@@ -29,7 +28,7 @@ public class projectile : MonoBehaviour
         boxCollider.enabled = false;
     }
 
-    private void SetDirection(float _direction)
+    public void SetDirection(float _direction)
     {
         direction = _direction;
         gameObject.SetActive(true);
