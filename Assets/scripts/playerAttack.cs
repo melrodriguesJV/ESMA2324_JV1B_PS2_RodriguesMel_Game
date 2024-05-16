@@ -29,7 +29,18 @@ public class playerAttack : MonoBehaviour
     {
         cooldownTimer = 0;
 
-        bullets[0].transform.position = firePoint.position;
-        bullets[0].GetComponent<projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+        bullets[FindBullet()].transform.position = firePoint.position;
+        bullets[FindBullet()].GetComponent<projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+    }
+
+    private int FindBullet()
+    {
+        for (int i = 0; i < bullets.Length; i++)
+        {
+            if (!bullets[i].activeInHierarchy)
+                return i;
+        }
+        
+        return 0;
     }
 }
