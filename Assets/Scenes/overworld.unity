@@ -275,10 +275,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 31230419}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: 422}
-  m_SizeDelta: {x: 1298.7222, y: 97.7533}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 689, y: -118}
+  m_SizeDelta: {x: 1298.7222, y: 97.753296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90252179
 MonoBehaviour:
@@ -1281,10 +1281,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 31230419}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: 422}
-  m_SizeDelta: {x: 1298.7222, y: 97.7533}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 689, y: -118}
+  m_SizeDelta: {x: 1298.7222, y: 97.753296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1572496218
 MonoBehaviour:
@@ -1705,6 +1705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
+  iFramesDuration: 2
+  numberOfFlashes: 3
 --- !u!1001 &681389639250506838
 PrefabInstance:
   m_ObjectHideFlags: 0
