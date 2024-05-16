@@ -6,13 +6,13 @@ public class playerMoves : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float jumpforce;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private LayerMask wallLayer;
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
     private float wallJumpCooldown;
     private float horizontalInput;
+    private bool grounded;
+    private bool onWall;
 
     private void Awake()
     {
@@ -24,6 +24,16 @@ public class playerMoves : MonoBehaviour
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
+        body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        {
+            body.velocity = new Vector2(body.velocity.x, jumpforce);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && onWall)
+        {
+            body.velocity = new Vector2(body.velocity.x, jumpforce);
+        }
 
         //flip the player
         if (horizontalInput > 0.01f)
@@ -33,65 +43,39 @@ public class playerMoves : MonoBehaviour
 
         //animations
         anim.SetBool("run", horizontalInput !=0);
-        anim.SetBool("grounded", isGrounded());
-
-        //wall jump
-        if (wallJumpCooldown < 0.2f)
-        {
-            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
-
-            if (onWall() && !isGrounded())
-            {
-                body.gravityScale = 0;
-                body.velocity = Vector2.zero;
-            }
-            else
-                body.gravityScale = 2;
-
-            if (Input.GetKey(KeyCode.Space))
-                Jump();
-        }
-        else
-            wallJumpCooldown += Time.deltaTime;
-
+        anim.SetBool("grounded", grounded);
     }
 
-    private void Jump()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isGrounded())
+        if (collision.gameObject.tag == "Ground")
         {
-            body.velocity = new Vector2(body.velocity.x, jumpforce);
-            anim.SetTrigger("jump");
+            grounded = true;
         }
-        else if(onWall() && !isGrounded())
+
+        if (collision.gameObject.tag == "Wall")
         {
-            if (horizontalInput == 0)
-            {
-                body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
-                transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
-            else
-                body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 3, 6);
-
-            wallJumpCooldown = 0;
+            onWall = true;
         }
-        
     }
 
-    private bool isGrounded()
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
-        return raycastHit.collider != null;
+        if (collision.gameObject.tag == "Ground")
+        {
+             grounded = false;
+        }
+
+        if (collision.gameObject.tag == "Wall")
+        {
+            onWall = false;
+        }
     }
 
-    private bool onWall()
-    {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
-        return raycastHit.collider != null;
-    }
+    // faire une deuxième box en trigger pour la détection du mur
 
     public bool canAttack()
     {
-        return horizontalInput == 0 && isGrounded() && !onWall();
-    } 
+        return horizontalInput == 0 && grounded && !onWall;
+    }
 }

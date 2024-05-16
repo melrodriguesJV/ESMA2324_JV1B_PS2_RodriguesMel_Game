@@ -25,7 +25,7 @@ public class playerAttack : MonoBehaviour
 
     private void Attack()
     {
-        anim.SetTrigger("attack");
+        
         cooldownTimer = 0;
     }
 }
