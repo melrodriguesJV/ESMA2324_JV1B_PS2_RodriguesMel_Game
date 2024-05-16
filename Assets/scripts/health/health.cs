@@ -6,6 +6,7 @@ public class health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
     public float currenthealth { get; private set; }
+    private bool dead;
 
     private void Awake()
     {
@@ -23,12 +24,16 @@ public class health : MonoBehaviour
         else
         {
             //dead
+            if (!dead)
+            {
+                GetComponent<playerMoves>().enabled = false;
+                dead = true;
+            }
         }
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            TakeDamage(1);
+        
     }
 }
