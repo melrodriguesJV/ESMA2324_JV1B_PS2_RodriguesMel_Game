@@ -90,8 +90,6 @@ public class playerMoves : MonoBehaviour
         }
     }
 
-    // faire une deuxième box en trigger pour la détection du mur
-
     public bool canAttack()
     {
         return horizontalInput == 0 && grounded && !onWall;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private Transform firePoint;
     private float direction;
     private bool hit;
 
