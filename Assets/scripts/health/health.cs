@@ -42,11 +42,6 @@ public class health : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        
-    }
-
     private IEnumerator Invulnerability()
     {
         Physics2D.IgnoreLayerCollision(6,7,true);

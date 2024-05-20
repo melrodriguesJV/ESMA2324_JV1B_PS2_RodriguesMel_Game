@@ -20,9 +20,30 @@ public class meleeEnemy : MonoBehaviour
     private Animator anim;
     private health playerHealth;
 
+    private enemyPatrol patrol;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+        //selectionner la bonne frame dans l'anim et lui attribuer le programme
+        patrol = GetComponentInParent<enemyPatrol>();
+    }
+
     private void Update()
     {
-        
+        cooldownTimer += Time.deltaTime;
+
+        //attck only when player in sight ?
+        if (PlayerInSight())
+        {
+            if (cooldownTimer >= attackCooldown)
+            {
+                cooldownTimer = 0;
+            }
+        }
+
+        if (patrol != null)
+            patrol.enabled = !PlayerInSight();
     }
     private bool PlayerInSight()
     {
