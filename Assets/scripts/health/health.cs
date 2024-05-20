@@ -36,7 +36,17 @@ public class health : MonoBehaviour
             //dead
             if (!dead)
             {
-                GetComponent<playerMoves>().enabled = false;
+                //Player
+                if (GetComponent<playerMoves>() != null) 
+                    GetComponent<playerMoves>().enabled = false;
+
+                //Enemy
+                if (GetComponentInParent<enemyPatrol>() != null)
+                    GetComponentInParent<enemyPatrol>().enabled = false;
+
+                if(GetComponent<meleeEnemy>() != null)
+                    GetComponent<meleeEnemy>().enabled = false;
+
                 dead = true;
             }
         }
