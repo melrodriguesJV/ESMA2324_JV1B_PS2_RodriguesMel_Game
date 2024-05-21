@@ -9,6 +9,9 @@ public class distanceEnemy : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private int damage;
 
+    [Header("Ranged Attack")]
+    [SerializeField] private Transform firepoint;
+
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D boxCollider;
@@ -63,12 +66,5 @@ public class distanceEnemy : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
-    }
-
-    private void DamagePlayer()
-    {
-        //if player is still in range damage him
-        if (PlayerInSight())
-            playerHealth.TakeDamage(damage);
     }
 }
