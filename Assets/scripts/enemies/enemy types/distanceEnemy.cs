@@ -11,6 +11,7 @@ public class distanceEnemy : MonoBehaviour
 
     [Header("Ranged Attack")]
     [SerializeField] private Transform firepoint;
+    [SerializeField] private GameObject[] bullets;
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
@@ -51,6 +52,8 @@ public class distanceEnemy : MonoBehaviour
     private void RangedAttack()
     {
         cooldownTimer = 0;
+        bullets[0].transform.position = firepoint.position;
+        bullets[0].GetComponent<enemyProjectile>().ActivateProjectile();
     }
 
     private bool PlayerInSight()
