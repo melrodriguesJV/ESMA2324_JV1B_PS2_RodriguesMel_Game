@@ -11,4 +11,10 @@ public class respawn : MonoBehaviour
     {
         playerHealth = GetComponent<health>();
     }
+
+    public void Respawn()
+    {
+        transform.position = currentCheckpoint.position;
+        playerHealth.Respawn();
+    }
 }
