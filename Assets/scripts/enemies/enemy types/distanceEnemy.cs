@@ -52,8 +52,18 @@ public class distanceEnemy : MonoBehaviour
     private void RangedAttack()
     {
         cooldownTimer = 0;
-        bullets[0].transform.position = firepoint.position;
-        bullets[0].GetComponent<enemyProjectile>().ActivateProjectile();
+        bullets[FindBullet()].transform.position = firepoint.position;
+        bullets[FindBullet()].GetComponent<enemyProjectile>().ActivateProjectile();
+    }
+
+    private int FindBullet()
+    {
+        for(int i =0; i < bullets.Length; i++)
+        {
+            if (!bullets[i].activeInHierarchy)
+                return i;
+        }
+        return 0;
     }
 
     private bool PlayerInSight()

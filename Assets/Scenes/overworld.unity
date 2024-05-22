@@ -1426,6 +1426,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1056146736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1809404991 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2747015503106014675, guid: 80d55b06e87ba2946a22b511207603e3, type: 3}
+  m_PrefabInstance: {fileID: 1626942361211869783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1889663439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4253774204178061572, guid: e4fffcdd06e49a049a6c54a20047af8c, type: 3}
@@ -1859,17 +1864,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7100993056034742000, guid: 80d55b06e87ba2946a22b511207603e3, type: 3}
-      propertyPath: range
-      value: -11
-      objectReference: {fileID: 0}
-    - target: {fileID: -7100993056034742000, guid: 80d55b06e87ba2946a22b511207603e3, type: 3}
-      propertyPath: colliderDistance
-      value: -0.57
-      objectReference: {fileID: 0}
-    - target: {fileID: -7100993056034742000, guid: 80d55b06e87ba2946a22b511207603e3, type: 3}
-      propertyPath: playerLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
+      propertyPath: firepoint
+      value: 
+      objectReference: {fileID: 1809404991}
     - target: {fileID: 347906946059072105, guid: 80d55b06e87ba2946a22b511207603e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24
