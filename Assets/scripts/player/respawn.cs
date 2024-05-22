@@ -17,4 +17,10 @@ public class respawn : MonoBehaviour
         transform.position = currentCheckpoint.position;
         playerHealth.Respawn();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        currentCheckpoint = collision.transform;
+        collision.GetComponent<Collider2D>().enabled = false;
+    }
 }
