@@ -39,6 +39,7 @@ public class meleeEnemy : MonoBehaviour
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
+                DamagePlayer();
             }
         }
 
