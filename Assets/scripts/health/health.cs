@@ -15,6 +15,9 @@ public class health : MonoBehaviour
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
 
+    [Header("Components")]
+    [SerializeField] private Behaviour[] components;
+
     private void Awake()
     {
         currenthealth = startingHealth;
@@ -36,16 +39,10 @@ public class health : MonoBehaviour
             //dead
             if (!dead)
             {
-                //Player
-                if (GetComponent<playerMoves>() != null) 
-                    GetComponent<playerMoves>().enabled = false;
-
-                //Enemy
-                if (GetComponentInParent<enemyPatrol>() != null)
-                    GetComponentInParent<enemyPatrol>().enabled = false;
-
-                if(GetComponent<meleeEnemy>() != null)
-                    GetComponent<meleeEnemy>().enabled = false;
+                foreach (Behaviour component in components)
+                {
+                    component.enabled = false;
+                }
 
                 dead = true;
             }
