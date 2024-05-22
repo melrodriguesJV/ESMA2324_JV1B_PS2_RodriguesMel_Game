@@ -43,6 +43,7 @@ public class distanceEnemy : MonoBehaviour
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
+                RangedAttack();
             }
         }
 
