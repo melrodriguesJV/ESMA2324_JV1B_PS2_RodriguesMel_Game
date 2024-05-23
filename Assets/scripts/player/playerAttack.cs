@@ -9,12 +9,14 @@ public class playerAttack : MonoBehaviour
     [SerializeField] private GameObject[] bullets;
     private Animator anim;
     private playerMoves playerMoves;
+    private batPowerup bat;
     private float cooldownTimer = Mathf.Infinity;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         playerMoves = GetComponent<playerMoves>();
+        bat = GetComponent<batPowerup>();
     }
 
     private void Update()
@@ -31,6 +33,11 @@ public class playerAttack : MonoBehaviour
 
         bullets[FindBullet()].transform.position = firePoint.position;
         bullets[FindBullet()].GetComponent<projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+    }
+
+    private void MeleeAttack()
+    {
+        
     }
 
     private int FindBullet()

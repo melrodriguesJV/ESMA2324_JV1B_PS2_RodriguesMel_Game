@@ -1193,7 +1193,7 @@ GameObject:
   - component: {fileID: 1324411331}
   - component: {fileID: 1324411330}
   - component: {fileID: 1324411333}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Medkit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1482,7 +1482,7 @@ GameObject:
   - component: {fileID: 1643313538}
   - component: {fileID: 1643313537}
   - component: {fileID: 1643313539}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BaseballBat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1613,7 +1613,7 @@ GameObject:
   - component: {fileID: 1720599653}
   - component: {fileID: 1720599655}
   - component: {fileID: 1720599656}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: checkpoint
   m_TagString: Checkpoint
   m_Icon: {fileID: 0}
@@ -2374,6 +2374,10 @@ PrefabInstance:
     - target: {fileID: 9068613479127070090, guid: cec4b18ea1993c441ae182a417dd6564, type: 3}
       propertyPath: m_Name
       value: securitycam
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068613479127070090, guid: cec4b18ea1993c441ae182a417dd6564, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
