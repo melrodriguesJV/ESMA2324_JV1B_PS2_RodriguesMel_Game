@@ -35,6 +35,9 @@ public class playerAttack : MonoBehaviour
         if (Input.GetMouseButton(0) && cooldownTimer > attackCooldown && playerMoves.canAttack())
             Attack();
 
+        if (Input.GetKeyDown(KeyCode.R) && cooldownTimer > attackCooldown && playerMoves.canAttack())
+            MeleeAttack();
+
         cooldownTimer += Time.deltaTime;
     }
 
@@ -48,7 +51,8 @@ public class playerAttack : MonoBehaviour
 
     private void MeleeAttack()
     {
-        
+        if (EnemyInSight() && bat.pick == true)
+            enemyHealth.TakeDamage(2);
     }
 
     private bool EnemyInSight()
