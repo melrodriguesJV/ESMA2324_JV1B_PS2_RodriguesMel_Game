@@ -224,12 +224,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  range: -0.9
-  colliderDistance: -1.2
-  boxCollider: {fileID: 4415108206331279489}
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!114 &6934073990062151193
 MonoBehaviour:
   m_ObjectHideFlags: 0
