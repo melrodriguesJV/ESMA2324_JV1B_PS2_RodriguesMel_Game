@@ -1482,6 +1482,7 @@ GameObject:
   - component: {fileID: 1643313538}
   - component: {fileID: 1643313537}
   - component: {fileID: 1643313539}
+  - component: {fileID: 1643313540}
   m_Layer: 11
   m_Name: BaseballBat
   m_TagString: Untagged
@@ -1601,6 +1602,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1643313540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643313536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74e6c1b4aa46ca469b2ed7fa542fd0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pick: 0
 --- !u!1 &1720599652
 GameObject:
   m_ObjectHideFlags: 0

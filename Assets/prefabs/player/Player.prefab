@@ -224,6 +224,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  colliderDistance: -1
+  boxCollider: {fileID: 4415108206331279489}
+  range: -1
 --- !u!114 &6934073990062151193
 MonoBehaviour:
   m_ObjectHideFlags: 0
