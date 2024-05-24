@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/overworld.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/sewers.unity
+    guid: 100b6be7c7d72ef41b1e0769b358f372
   m_configObjects: {}
