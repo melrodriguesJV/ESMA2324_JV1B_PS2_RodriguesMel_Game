@@ -27,9 +27,9 @@ public class playerMoves : MonoBehaviour
         
         //flip the player
         if (horizontalInput > 0.01f)
-            transform.localScale = Vector3.one;
+            transform.localScale = new Vector3(0.4050891f, 0.4050891f, 0.4050891f);
         else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(-1,1,1);
+            transform.localScale = new Vector3(-0.4050891f, 0.4050891f, 0.4050891f);
 
         //animations
         anim.SetBool("run", horizontalInput !=0);
