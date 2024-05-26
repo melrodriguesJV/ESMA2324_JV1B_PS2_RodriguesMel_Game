@@ -386,6 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3bf8897b527ea946906b33fb4c3a49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerIsClose: 0
   Player: {fileID: 8802349497752914555}
   Health: {fileID: 31230418}
 --- !u!1 &90252177
@@ -904,7 +905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7500840671232013429, guid: 1e15ca63f22f1d24f80c9f6e358c7dbb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10.838879
+      value: 8.709039
       objectReference: {fileID: 0}
     - target: {fileID: 7500840671232013429, guid: 1e15ca63f22f1d24f80c9f6e358c7dbb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -912,7 +913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7500840671232013429, guid: 1e15ca63f22f1d24f80c9f6e358c7dbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.323
+      value: 6.3877
       objectReference: {fileID: 0}
     - target: {fileID: 7500840671232013429, guid: 1e15ca63f22f1d24f80c9f6e358c7dbb, type: 3}
       propertyPath: m_LocalPosition.z
