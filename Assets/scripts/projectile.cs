@@ -35,7 +35,7 @@ public class projectile : MonoBehaviour
         Deactivate();
 
         if (collision.tag == "Enemy")
-            collision.GetComponent<health>().TakeDamage(1);
+            collision.GetComponent<enemyHealth>().TakeDamage(1);
     }
 
     public void SetDirection(float _direction)

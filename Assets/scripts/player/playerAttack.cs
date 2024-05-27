@@ -49,7 +49,7 @@ public class playerAttack : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            
+            enemy.GetComponent<enemyHealth>().TakeDamage(1);
         }
     
     }
