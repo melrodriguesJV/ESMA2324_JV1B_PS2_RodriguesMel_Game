@@ -15,7 +15,6 @@ public class playerAttack : MonoBehaviour
     private Animator anim;
     private playerMoves playerMoves;
     private batPowerup bat;
-    private health hp;
     private float cooldownTimer = Mathf.Infinity;
 
     private void Awake()
@@ -23,7 +22,6 @@ public class playerAttack : MonoBehaviour
         anim = GetComponent<Animator>();
         playerMoves = GetComponent<playerMoves>();
         bat = GetComponent<batPowerup>();
-        hp = GetComponent<health>();
     }
 
     private void Update()
@@ -47,15 +45,21 @@ public class playerAttack : MonoBehaviour
 
     private void Melee()
     {
-        if (bat.pick == true)
-        {
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(meleePoint.position, meleeRange, enemyLayer);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(meleePoint.position, meleeRange, enemyLayer);
 
-            foreach(Collider2D enemy in hitEnemies)
-            {
-                hp.TakeDamage(1);
-            }
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            Debug.Log( "We hit" + enemy.name );
         }
+    
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (meleePoint == null)
+            return; //éviter des bugs
+
+        Gizmos.DrawWireSphere(meleePoint.position, meleeRange);
     }
 
     private int FindBullet()
