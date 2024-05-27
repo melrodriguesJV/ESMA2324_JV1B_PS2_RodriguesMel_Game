@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2347785307570744454}
   - component: {fileID: 3832563960897022103}
   - component: {fileID: 6067710160081880738}
-  - component: {fileID: 2752922723483034464}
+  - component: {fileID: 221716617467892}
   m_Layer: 7
   m_Name: Dog
   m_TagString: Enemy
@@ -220,7 +220,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2752922723483034464
+--- !u!114 &221716617467892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,12 +229,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9165879863487817859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f80967ba09a0a9f4ea3f99a09273caea, type: 3}
+  m_Script: {fileID: 11500000, guid: a59b4bfe28949204d9e32d608048c9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 2
-  iFramesDuration: 0
-  numberOfFlashes: 0
   components:
-  - {fileID: 2347785307570744454}
   - {fileID: 3832563960897022103}
+  - {fileID: 2347785307570744454}

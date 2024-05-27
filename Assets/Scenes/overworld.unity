@@ -475,9 +475,9 @@ GameObject:
   - component: {fileID: 120334284}
   - component: {fileID: 120334283}
   - component: {fileID: 120334282}
-  - component: {fileID: 120334281}
   - component: {fileID: 120334280}
   - component: {fileID: 120334279}
+  - component: {fileID: 120334285}
   m_Layer: 7
   m_Name: MeleeCop
   m_TagString: Enemy
@@ -557,23 +557,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &120334281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120334278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f80967ba09a0a9f4ea3f99a09273caea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 3
-  iFramesDuration: 0
-  numberOfFlashes: 0
-  components:
-  - {fileID: 120334282}
 --- !u!114 &120334282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,6 +644,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &120334285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120334278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59b4bfe28949204d9e32d608048c9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
+  components:
+  - {fileID: 120334282}
 --- !u!4 &145297661 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1532485720440039114, guid: e4fffcdd06e49a049a6c54a20047af8c, type: 3}

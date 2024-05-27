@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1303061982740751067}
   - component: {fileID: 3173618416806177320}
   - component: {fileID: 814361241446733940}
-  - component: {fileID: 8691699732866135050}
   - component: {fileID: 6769444730973225263}
+  - component: {fileID: 9040380946511193940}
   m_Layer: 7
   m_Name: distanceCop
   m_TagString: Enemy
@@ -183,23 +183,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8691699732866135050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409873129398366427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f80967ba09a0a9f4ea3f99a09273caea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 3
-  iFramesDuration: 0
-  numberOfFlashes: 0
-  components:
-  - {fileID: 6769444730973225263}
 --- !u!114 &6769444730973225263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +215,21 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &9040380946511193940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409873129398366427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59b4bfe28949204d9e32d608048c9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
+  components:
+  - {fileID: 6769444730973225263}
 --- !u!1 &7209222185118280068
 GameObject:
   m_ObjectHideFlags: 0
