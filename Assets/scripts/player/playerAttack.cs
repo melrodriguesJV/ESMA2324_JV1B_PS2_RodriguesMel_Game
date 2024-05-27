@@ -12,7 +12,7 @@ public class playerAttack : MonoBehaviour
     [SerializeField] private float meleeRange;
     [SerializeField] private LayerMask enemyLayer;
 
-    private batPowerup bat;
+    public bool picked;
     private Animator anim;
     private playerMoves playerMoves;
     private float cooldownTimer = Mathf.Infinity;
@@ -21,7 +21,6 @@ public class playerAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         playerMoves = GetComponent<playerMoves>();
-        bat = GetComponent<batPowerup>();
     }
 
     private void Update()
@@ -29,7 +28,7 @@ public class playerAttack : MonoBehaviour
         if (Input.GetMouseButton(0) && cooldownTimer > attackCooldown && playerMoves.canAttack())
             Attack();
 
-        if (Input.GetKeyDown(KeyCode.B) && cooldownTimer > attackCooldown && playerMoves.canAttack())
+        if (Input.GetKeyDown(KeyCode.B) && cooldownTimer > attackCooldown && playerMoves.canAttack() && picked)
             Melee();
 
         cooldownTimer += Time.deltaTime;

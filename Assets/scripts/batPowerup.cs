@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class batPowerup : MonoBehaviour
 {
-    public bool pick;
-
+    [SerializeField] private GameObject player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            gameObject.SetActive(false);
-            pick = true;
+            Pickup();
         }
+    }
+
+    private void Pickup()
+    {
+        player.GetComponent<playerAttack>().picked = true;
+        Destroy(gameObject);
     }
 }
