@@ -6,6 +6,7 @@ public class health : MonoBehaviour
 {
     [Header ("Health")]
     [SerializeField] private float startingHealth;
+    [SerializeField] private GameObject respawnButton;
     public float currenthealth { get; private set; }
     private Animator anim;
     private bool dead;
@@ -23,6 +24,15 @@ public class health : MonoBehaviour
         currenthealth = startingHealth;
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        if (dead) 
+        {
+            respawnButton.SetActive(true);
+        
+        }
     }
 
     public void TakeDamage (float _damage)
