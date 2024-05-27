@@ -3343,6 +3343,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7368882682533248498, guid: 7b0810c9329d6484ca090e612ea7dba7, type: 3}
+      propertyPath: bat
+      value: 
+      objectReference: {fileID: 1643313540}
+    - target: {fileID: 7368882682533248498, guid: 7b0810c9329d6484ca090e612ea7dba7, type: 3}
       propertyPath: bullets.Array.data[0]
       value: 
       objectReference: {fileID: 1625960599}

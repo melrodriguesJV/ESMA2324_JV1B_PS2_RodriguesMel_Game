@@ -20,6 +20,12 @@ public class enemyHealth : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        if(dead == true)
+            Deactivate();
+    }
+
     public void TakeDamage(float _damage)
     {
         currenthealth = Mathf.Clamp(currenthealth - _damage, 0, startingHealth);

@@ -12,9 +12,9 @@ public class playerAttack : MonoBehaviour
     [SerializeField] private float meleeRange;
     [SerializeField] private LayerMask enemyLayer;
 
+    private batPowerup bat;
     private Animator anim;
     private playerMoves playerMoves;
-    private batPowerup bat;
     private float cooldownTimer = Mathf.Infinity;
 
     private void Awake()

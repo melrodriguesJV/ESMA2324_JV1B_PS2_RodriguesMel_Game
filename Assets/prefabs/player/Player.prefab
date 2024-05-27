@@ -231,6 +231,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  bat: {fileID: 0}
 --- !u!114 &6934073990062151193
 MonoBehaviour:
   m_ObjectHideFlags: 0
