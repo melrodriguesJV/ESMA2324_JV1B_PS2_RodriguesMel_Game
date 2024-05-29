@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 4432388794178772749}
   m_Layer: 7
   m_Name: CopBot
-  m_TagString: Enemy
+  m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,7 +291,7 @@ Animator:
   m_GameObject: {fileID: 5792308204147691120}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ab3c7678ca659cf4f9d414293f3bd7f3, type: 2}
+  m_Controller: {fileID: 9100000, guid: aca1665fb1e54ab45923c626bcc7948a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1
-  range: 11
+  range: 7
   damage: 1
   firepoint: {fileID: 5248029601415154686}
   bullets:
