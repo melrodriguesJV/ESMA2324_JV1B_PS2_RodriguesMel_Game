@@ -1218,6 +1218,7 @@ GameObject:
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1340,9 +1341,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replayButton: {fileID: 1630071916}
   leaveButton: {fileID: 620216927}
+  pauseButton: {fileID: 0}
   player: {fileID: 8802349497752914555}
   currentCamera: {fileID: 519420028}
   canvas: {fileID: 1056146732}
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd96b82deb6ba44a978fe323bf35143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leaveButton: {fileID: 620216927}
 --- !u!1001 &567744028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2526,7 +2541,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1455994752}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 519420036}
+        m_TargetAssemblyTypeName: pauseButton, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1455994752
 MonoBehaviour:
   m_ObjectHideFlags: 0

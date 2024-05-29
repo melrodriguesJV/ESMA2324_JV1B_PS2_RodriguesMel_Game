@@ -7,6 +7,7 @@ public class respawnButton : MonoBehaviour
 {
     [SerializeField] private GameObject replayButton;
     [SerializeField] private GameObject leaveButton;
+    [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject currentCamera;
     [SerializeField] private GameObject canvas;
@@ -33,6 +34,7 @@ public class respawnButton : MonoBehaviour
         SceneManager.LoadSceneAsync(0);
         replayButton.SetActive(false);
         leaveButton.SetActive(false);
+        pauseButton.SetActive(false);
         Destroy(player);
         Destroy(currentCamera);
         Destroy(canvas);
