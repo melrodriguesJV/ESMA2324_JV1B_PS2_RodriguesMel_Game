@@ -22,7 +22,7 @@ public class health : MonoBehaviour
 
     private void Awake()
     {
-        crossed = false;
+        crossed = true;
         currenthealth = startingHealth;
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();

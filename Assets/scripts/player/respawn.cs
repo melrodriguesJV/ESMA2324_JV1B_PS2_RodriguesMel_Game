@@ -38,6 +38,7 @@ public class respawn : MonoBehaviour
         {
             currentCheckpoint = collision.transform;
             collision.GetComponent<Collider2D>().enabled = false;
+            playerHealth.crossed = false;
         }
         
     }
