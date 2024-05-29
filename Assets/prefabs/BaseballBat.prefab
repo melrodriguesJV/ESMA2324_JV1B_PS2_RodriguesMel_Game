@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1198582925023487491}
   m_Layer: 11
   m_Name: BaseballBat
-  m_TagString: Untagged
+  m_TagString: Batt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -9,10 +9,12 @@ public class tagWall : MonoBehaviour
     public bool playerIsClose;
     private SpriteRenderer spriteRend;
     private PointManager pointManager;
+    private bool check;
 
     private void Awake()
     {
         spriteRend = GetComponent<SpriteRenderer>();
+        check = false;
     }
 
     private void Start()
@@ -21,10 +23,11 @@ public class tagWall : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose && check == false)
         {
             spriteRend.color = Color.red; // change l'apparence du mur
             pointManager.ChangePoints(value); // ajoute des points au score
+            check = true;
         }
     }
 

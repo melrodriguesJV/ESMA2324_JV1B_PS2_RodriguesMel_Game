@@ -19,6 +19,7 @@ public class playerAttack : MonoBehaviour
 
     private void Awake()
     {
+        picked = false;
         anim = GetComponent<Animator>();
         playerMoves = GetComponent<playerMoves>();
     }

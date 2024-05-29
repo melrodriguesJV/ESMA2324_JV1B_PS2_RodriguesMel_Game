@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Checkpoint
   - Robot
+  - Batt
   layers:
   - Default
   - TransparentFX
