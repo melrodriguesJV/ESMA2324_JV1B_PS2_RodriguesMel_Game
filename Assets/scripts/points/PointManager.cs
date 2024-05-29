@@ -26,5 +26,8 @@ public class PointManager : MonoBehaviour
     public void ChangePoints(int amount)
     {
         points += amount;
+
+        if (amount == 0)
+            points = 0;
     }
 }
