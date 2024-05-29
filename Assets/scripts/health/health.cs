@@ -7,6 +7,7 @@ public class health : MonoBehaviour
     [Header ("Health")]
     [SerializeField] private float startingHealth;
     [SerializeField] private GameObject respawnButton;
+    [SerializeField] private GameObject leaveButton;
     public float currenthealth { get; private set; }
     private Animator anim;
     public bool dead;
@@ -33,6 +34,7 @@ public class health : MonoBehaviour
         if (dead && crossed) 
         {
             respawnButton.SetActive(true);
+            leaveButton.SetActive(true);
         
         }
     }

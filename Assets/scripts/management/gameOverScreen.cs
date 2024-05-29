@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class respawnButton : MonoBehaviour
 {
     [SerializeField] private GameObject replayButton;
+    [SerializeField] private GameObject leaveButton;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject currentCamera;
     [SerializeField] private GameObject canvas;
@@ -20,6 +21,18 @@ public class respawnButton : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(1);
         replayButton.SetActive(false);
+        leaveButton.SetActive(false);
+        Destroy(player);
+        Destroy(currentCamera);
+        Destroy(canvas);
+        pointManager.ChangePoints(0);
+    }
+
+    public void Leave()
+    {
+        SceneManager.LoadSceneAsync(0);
+        replayButton.SetActive(false);
+        leaveButton.SetActive(false);
         Destroy(player);
         Destroy(currentCamera);
         Destroy(canvas);
