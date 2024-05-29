@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class teleport : MonoBehaviour
 {
+    [SerializeField] private int currentScene;
     public bool playerIsClose;
     public GameObject Player;
     public GameObject Health;
@@ -12,7 +13,7 @@ public class teleport : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-            SceneManager.LoadSceneAsync(2);
+            SceneManager.LoadSceneAsync(currentScene + 1);
         }
 
     }
