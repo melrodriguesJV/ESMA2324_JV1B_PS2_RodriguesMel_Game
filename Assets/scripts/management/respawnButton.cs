@@ -8,6 +8,7 @@ public class respawnButton : MonoBehaviour
     [SerializeField] private GameObject replayButton;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject currentCamera;
+    [SerializeField] private GameObject canvas;
     private PointManager pointManager;
 
     private void Start()
@@ -21,6 +22,7 @@ public class respawnButton : MonoBehaviour
         replayButton.SetActive(false);
         Destroy(player);
         Destroy(currentCamera);
+        Destroy(canvas);
         pointManager.ChangePoints(0);
     }
 }
