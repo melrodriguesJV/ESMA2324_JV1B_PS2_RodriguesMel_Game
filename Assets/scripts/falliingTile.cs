@@ -15,7 +15,7 @@ public class falliingTile : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            body.gravityScale = 1;
+            body.gravityScale = 0.25f;
         }
     }
 }
