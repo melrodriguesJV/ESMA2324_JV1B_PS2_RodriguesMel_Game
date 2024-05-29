@@ -28,6 +28,7 @@ public class enemyProjectile : enemyDamage
 
     private void Update()
     {
+        if (hit) return;
         float movementSpeed = speed * Time.deltaTime;
         transform.Translate(movementSpeed, 0, 0);
 
