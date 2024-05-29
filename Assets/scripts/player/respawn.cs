@@ -6,18 +6,24 @@ public class respawn : MonoBehaviour
 {
     private Transform currentCheckpoint;
     private health playerHealth;
+    private bool check;
 
     private void Awake()
     {
+        check = false;
         playerHealth = GetComponent<health>();
     }
 
     private void Update()
     {
-        if (playerHealth.dead == true)
+        if (playerHealth.dead == true && check == false)
         {
             Respawn();
+            check = true;
         }
+
+        if (check == true)
+            playerHealth.crossed = true;
     }
 
     public void Respawn()
