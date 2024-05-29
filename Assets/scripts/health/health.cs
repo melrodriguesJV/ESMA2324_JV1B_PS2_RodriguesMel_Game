@@ -9,7 +9,8 @@ public class health : MonoBehaviour
     [SerializeField] private GameObject respawnButton;
     public float currenthealth { get; private set; }
     private Animator anim;
-    private bool dead;
+    public bool dead;
+    private bool crossed;
 
     [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
@@ -21,6 +22,7 @@ public class health : MonoBehaviour
 
     private void Awake()
     {
+        crossed = false;
         currenthealth = startingHealth;
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
@@ -28,7 +30,7 @@ public class health : MonoBehaviour
 
     private void Update()
     {
-        if (dead) 
+        if (dead && crossed) 
         {
             respawnButton.SetActive(true);
         

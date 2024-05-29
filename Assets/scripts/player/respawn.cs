@@ -12,6 +12,14 @@ public class respawn : MonoBehaviour
         playerHealth = GetComponent<health>();
     }
 
+    private void Update()
+    {
+        if (playerHealth.dead == true)
+        {
+            Respawn();
+        }
+    }
+
     public void Respawn()
     {
         transform.position = currentCheckpoint.position;
@@ -20,7 +28,11 @@ public class respawn : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        currentCheckpoint = collision.transform;
-        collision.GetComponent<Collider2D>().enabled = false;
+        if (collision.transform.tag == "Checkpoint")
+        {
+            currentCheckpoint = collision.transform;
+            collision.GetComponent<Collider2D>().enabled = false;
+        }
+        
     }
 }
