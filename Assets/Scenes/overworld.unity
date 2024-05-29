@@ -1290,6 +1290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   replayButton: {fileID: 1630071916}
+  player: {fileID: 8802349497752914555}
+  currentCamera: {fileID: 519420028}
 --- !u!1001 &567744028
 PrefabInstance:
   m_ObjectHideFlags: 0
