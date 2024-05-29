@@ -145,5 +145,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene: 1
   playerIsClose: 0
-  Player: {fileID: 0}
+  Player: {fileID: 3972368057115159381, guid: 7b0810c9329d6484ca090e612ea7dba7, type: 3}
   Health: {fileID: 0}
