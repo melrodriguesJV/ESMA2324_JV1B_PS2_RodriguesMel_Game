@@ -14,8 +14,8 @@ public class projectile : MonoBehaviour
     private void Awake()
     {
         boxCollider = GetComponent<BoxCollider2D>();
-        Physics2D.IgnoreLayerCollision(10, 11, true);
-        Physics2D.IgnoreLayerCollision(10, 12, true);
+        Physics2D.IgnoreLayerCollision(10, 11, true); // pas de collisions avec les collectibles
+        Physics2D.IgnoreLayerCollision(10, 12, true); // pas de collsions avec les caméras
     }
 
     private void Update()

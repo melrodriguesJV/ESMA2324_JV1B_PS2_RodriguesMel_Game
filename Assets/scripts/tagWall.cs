@@ -23,8 +23,8 @@ public class tagWall : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-            spriteRend.color = Color.red;
-            pointManager.ChangePoints(value);
+            spriteRend.color = Color.red; // change l'apparence du mur
+            pointManager.ChangePoints(value); // ajoute des points au score
         }
     }
 
