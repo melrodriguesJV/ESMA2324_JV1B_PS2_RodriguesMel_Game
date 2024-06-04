@@ -3413,30 +3413,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6370850569174910612, guid: dd281380bc4b33d43b126528b476e572, type: 3}
-      propertyPath: m_Size.x
-      value: 2.4869673
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370850569174910612, guid: dd281380bc4b33d43b126528b476e572, type: 3}
-      propertyPath: m_Size.y
-      value: 2.4831817
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370850569174910612, guid: dd281380bc4b33d43b126528b476e572, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.00550735
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370850569174910612, guid: dd281380bc4b33d43b126528b476e572, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.005932927
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370850569174910612, guid: dd281380bc4b33d43b126528b476e572, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370850569174910612, guid: dd281380bc4b33d43b126528b476e572, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.49
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3633,6 +3609,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1303061982740751067, guid: d3cd3579419dd504987701969c465982, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303061982740751067, guid: d3cd3579419dd504987701969c465982, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3509997800378187966, guid: d3cd3579419dd504987701969c465982, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.08
@@ -3935,11 +3919,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3041938153096890564, guid: 7b0810c9329d6484ca090e612ea7dba7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.847
+      value: -2.14
       objectReference: {fileID: 0}
     - target: {fileID: 3041938153096890564, guid: 7b0810c9329d6484ca090e612ea7dba7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.027
+      value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 3041938153096890564, guid: 7b0810c9329d6484ca090e612ea7dba7, type: 3}
       propertyPath: m_LocalPosition.z
