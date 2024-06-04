@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replayButton: {fileID: 1630071916}
   leaveButton: {fileID: 620216927}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 1455994749}
   player: {fileID: 8802349497752914555}
   currentCamera: {fileID: 519420028}
   canvas: {fileID: 1056146732}

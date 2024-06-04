@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class respawnButton : MonoBehaviour
+public class gameOverScreen : MonoBehaviour
 {
     [SerializeField] private GameObject replayButton;
     [SerializeField] private GameObject leaveButton;
