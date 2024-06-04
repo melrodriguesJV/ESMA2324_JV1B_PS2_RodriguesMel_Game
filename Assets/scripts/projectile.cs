@@ -16,6 +16,7 @@ public class projectile : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         Physics2D.IgnoreLayerCollision(10, 11, true); // pas de collisions avec les collectibles
         Physics2D.IgnoreLayerCollision(10, 12, true); // pas de collsions avec les caméras
+        Physics2D.IgnoreLayerCollision(10, 10, true); // pas de collsions avec les autres munitions
     }
 
     private void Update()
