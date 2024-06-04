@@ -54,6 +54,7 @@ public class playerMoves : MonoBehaviour
         {
             body.velocity = new Vector2(body.velocity.x, jumpforce);
             anim.SetTrigger("jump");
+            grounded = false;
         }
 
         if (onWall && !grounded)
