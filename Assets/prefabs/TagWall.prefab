@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 50
+  covered: {fileID: 21300000, guid: 9acfdf3f2f2de2243a6fcfd004ead9cc, type: 3}
   playerIsClose: 0
 --- !u!61 &6370850569174910612
 BoxCollider2D:
