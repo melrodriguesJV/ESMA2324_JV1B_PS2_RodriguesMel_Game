@@ -36,6 +36,7 @@ public class respawn : MonoBehaviour
     {
         if (collision.transform.tag == "Checkpoint")
         {
+            check = false;
             currentCheckpoint = collision.transform;
             collision.GetComponent<Collider2D>().enabled = false;
             playerHealth.crossed = false;
