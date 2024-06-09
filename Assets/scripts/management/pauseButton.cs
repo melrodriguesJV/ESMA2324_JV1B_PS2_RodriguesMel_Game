@@ -2,23 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class pauseButton : MonoBehaviour
 {
-    [SerializeField] private GameObject leaveButton;
+    [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject currentCamera;
     [SerializeField] private GameObject canvas;
     private PointManager pointManager;
-    public void Pause()
+
+    private void Start()
     {
-        leaveButton.SetActive(true);
+        pauseMenu.SetActive(false);
+        pointManager = PointManager.instance;
     }
 
-    public void Leave()
+    public void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void resumeGame()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void Menu()
     {
         SceneManager.LoadSceneAsync(0);
-        leaveButton.SetActive(false);
         Destroy(player);
         Destroy(currentCamera);
         Destroy(canvas);
